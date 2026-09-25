@@ -107,3 +107,10 @@ V2.3 is additive over V2.2. Repository-local governance, zero-touch bootstrap, c
 ### Security
 
 Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot create target repositories. Missing or insufficient creator authority leaves PREP-001 pending and never fabricates PASS evidence.
+
+## Governance Automation V2.4.0
+
+- Added repository-local governed agent entry point.
+- Added FIRST_AGENT_BOOTSTRAP guided baseline.
+- Added NORMAL_GOVERNED_ENTRY routing for subsequent agents.
+- Added exact-HEAD guarded automatic baseline commit.
