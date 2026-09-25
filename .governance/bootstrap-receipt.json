@@ -9,10 +9,13 @@
   "initialized": true,
   "validation": "PASS",
   "input_head_sha": "bd1875ef7948bc74cedae13c6ab1065bf1c0d279",
-  "initialization_commit_sha": null,
+  "initialization_commit_sha": "98c8fecd4db017bb513f7a6fcc2531bf2b5058be",
   "template_repository": "chainsolutions-wealthtech/Governed-Repository-Template",
   "template_revision": "2.3.3",
   "github_run_id": "36090689981",
   "generated_at": "2026-09-25T03:31:59+00:00",
-  "next_action": "DISCOVER_PROJECT_BASELINE"
+  "next_action": "DISCOVER_PROJECT_BASELINE",
+  "attestation_subject_sha": "98c8fecd4db017bb513f7a6fcc2531bf2b5058be",
+  "attestation_model": "CHILD_COMMIT_ATTESTS_INITIALIZATION_COMMIT",
+  "attested_at": "2026-09-25T03:32:00+00:00"
 }

@@ -1,9 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "status": "INITIALIZED_PENDING_ATTESTATION",
+  "status": "PASS",
   "initialized": true,
   "repository": "Patricked-code/Gouvern",
   "canonical_branch": "main",
   "bootstrap_revision": 1,
-  "last_receipt": ".governance/bootstrap-receipt.json"
+  "last_receipt": ".governance/bootstrap-receipt.json",
+  "attested_initialization_commit_sha": "98c8fecd4db017bb513f7a6fcc2531bf2b5058be",
+  "attestation_subject_sha": "98c8fecd4db017bb513f7a6fcc2531bf2b5058be",
+  "attestation_model": "CHILD_COMMIT_ATTESTS_INITIALIZATION_COMMIT",
+  "attested_at": "2026-09-25T03:32:00+00:00"
 }
