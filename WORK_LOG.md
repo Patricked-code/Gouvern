@@ -1,9 +1,9 @@
 # WORK_LOG — Journal d'exécution
 
-## {{INITIALIZED_AT}} — Template instantiated
+## 2026-09-25T03:31:59+00:00 — Template instantiated
 
-- Repository: `{{REPOSITORY}}`
-- Canonical branch: `{{CANONICAL_BRANCH}}`
+- Repository: `Patricked-code/Gouvern`
+- Canonical branch: `main`
 - Action: initialize governed repository
 - Result: `PENDING`
 

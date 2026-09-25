@@ -1,11 +1,11 @@
 # PROJECT_CONTEXT
 
-- Repository: `{{REPOSITORY}}`
-- Project: `{{PROJECT_NAME}}`
-- Project type: `{{PROJECT_TYPE}}`
-- Owner: `{{OWNER}}`
-- Canonical branch: `{{CANONICAL_BRANCH}}`
-- Initialized at: `{{INITIALIZED_AT}}`
+- Repository: `Patricked-code/Gouvern`
+- Project: `Gouvern`
+- Project type: `generic`
+- Owner: `@Patricked-code`
+- Canonical branch: `main`
+- Initialized at: `2026-09-25T03:31:59+00:00`
 
 ## Mission
 

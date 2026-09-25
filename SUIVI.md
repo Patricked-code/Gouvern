@@ -1,10 +1,10 @@
 # SUIVI — Historique durable
 
-## {{INITIALIZED_AT}} — Initialisation
+## 2026-09-25T03:31:59+00:00 — Initialisation
 
 - Template: Governed Repository Template
-- Repository: `{{REPOSITORY}}`
-- Project: `{{PROJECT_NAME}}`
+- Repository: `Patricked-code/Gouvern`
+- Project: `Gouvern`
 - State: `INITIALIZATION_REQUIRED`
 
 Les entrées suivantes doivent documenter les changements durables, décisions, migrations, validations et limitations importantes.

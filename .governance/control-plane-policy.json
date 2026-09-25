@@ -34,10 +34,11 @@
     ".github/workflows/governed-control-plane.yml",
     ".github/ISSUE_TEMPLATE/governed-request.yml"
   ],
-  "current_role": "CENTRAL_GOVERNANCE_CONTROL_PLANE",
+  "current_role": "GOVERNED_TARGET_CLIENT",
   "executor": {
     "repository_creation": "scripts/control_plane_create_repository.py",
     "authority_policy": ".governance/repository-creation-executor.json",
     "github_endpoint": "POST /repos/chainsolutions-wealthtech/Governed-Repository-Template/generate"
-  }
+  },
+  "client_repository": "Patricked-code/Gouvern"
 }

@@ -1,13 +1,13 @@
 {
   "schema_version": "2.0.0",
-  "template_source": true,
-  "initialized": false,
-  "repository": "{{REPOSITORY}}",
-  "project_name": "{{PROJECT_NAME}}",
-  "project_type": "{{PROJECT_TYPE}}",
-  "owner": "{{OWNER}}",
-  "canonical_branch": "{{CANONICAL_BRANCH}}",
-  "initialized_at": "{{INITIALIZED_AT}}",
+  "template_source": false,
+  "initialized": true,
+  "repository": "Patricked-code/Gouvern",
+  "project_name": "Gouvern",
+  "project_type": "generic",
+  "owner": "@Patricked-code",
+  "canonical_branch": "main",
+  "initialized_at": "2026-09-25T03:31:59+00:00",
   "policies": {
     "force_push": "FORBIDDEN",
     "history_rewrite": "FORBIDDEN",
@@ -75,5 +75,6 @@
     "explicit_target_handoff": true,
     "repository_creation_executor": true,
     "generate_from_template": true
-  }
+  },
+  "initialization_mode": "TEMPLATE_BOOTSTRAP"
 }
