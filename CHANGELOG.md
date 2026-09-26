@@ -159,3 +159,9 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Preserves automatic direct MCP credential provisioning and V2.6.4 fail-closed reporting.
 - Classifies target GitHub context, issue read, local-state decode and credential-gate contract failures before secret provisioning.
 - Keeps failure evidence non-secret and blocks machine dispatch until the credential path is valid.
+
+## Governance Automation V2.6.7
+
+- Preserves direct MCP as the preferred BOTH transport while allowing read-only GitHub OIDC SSH discovery when the central direct credential is unavailable.
+- Records degraded BOTH discovery as PARTIAL with direct credential unavailability preserved explicitly.
+- Keeps DIRECT_MCP_TOKEN credential requirements mandatory and MCP write authority unchanged.
