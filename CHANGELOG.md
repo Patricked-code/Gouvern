@@ -121,3 +121,9 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Added strict host-key pinning from authenticated broker evidence.
 - Added read-only force-command SSH discovery fallback.
 - Preserved direct MCP + SSH BOTH mode without expanding server WRITE authority.
+
+## Governance Automation V2.6.1
+
+- Added GitHub App repository_dispatch machine commands for local-entry automation.
+- Preserved human write-permission authorization for issue commands.
+- Added exact-HEAD guards across central-to-local machine dispatch.
