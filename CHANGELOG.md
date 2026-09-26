@@ -178,3 +178,9 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Preserves V2.6.8 retryable discovery semantics.
 - Provisions the central direct MCP credential opportunistically for BOTH on any governed local command when available.
 - Preserves SSH OIDC fallback when the central direct credential is absent.
+
+## Governance Automation V2.6.10
+
+- Preserves V2.6.9 opportunistic BOTH credential provisioning.
+- Refreshes degraded BOTH discovery before setup approval when the preferred direct credential becomes available.
+- Preserves prior discovery evidence and existing setup answers during reconciliation.
