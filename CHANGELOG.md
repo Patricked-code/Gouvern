@@ -172,3 +172,9 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Persists MCP discovery failures with stable non-secret codes in the local governed issue.
 - Allows exact-head /local-execute retry while the local state is MCP_DISCOVERY.
 - Keeps HEAD_MOVED fail-closed without state mutation.
+
+## Governance Automation V2.6.9
+
+- Preserves V2.6.8 retryable discovery semantics.
+- Provisions the central direct MCP credential opportunistically for BOTH on any governed local command when available.
+- Preserves SSH OIDC fallback when the central direct credential is absent.
