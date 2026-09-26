@@ -35,7 +35,21 @@
     "CASE_REPLAY_LEDGER_REQUIRED_FOR_ACTIVE_MACRO_CASE",
     "OWNER_FEEDBACK_MUST_BE_RECONCILED_BEFORE_CONTINUATION",
     "CANONICAL_MEMORY_HAS_QUERYABLE_RELATIONAL_PROJECTION",
-    "DATABASE_EVOLVES_BY_VERSIONED_MIGRATIONS"
+    "DATABASE_EVOLVES_BY_VERSIONED_MIGRATIONS",
+    "AGENT_ACTIVITY_MUST_BE_DURABLY_RECORDED",
+    "DISCOVERED_TASKS_MUST_ENTER_CANONICAL_QUEUE_BEFORE_CONTINUATION",
+    "TARGET_ARCHITECTURE_NE_LIVE_CURRENT_STATE",
+    "CANONICAL_AUTHORITIES_REVISIONED_MONOTONICALLY",
+    "APPEND_HISTORY_PLUS_CURRENT_PROJECTION",
+    "WORKFLOW_SEMANTICS_BEFORE_FRONTEND",
+    "CANONICAL_MEMORY_AND_RELATIONAL_PROJECTION_EVOLVE_TOGETHER",
+    "STRUCTURED_DURABLE_CHANGES_MUST_BE_PROJECTED_OR_MARKED_PENDING",
+    "TWO_STAGE_AGENT_PURPOSE_ROUTING_TARGET",
+    "HUMAN_TECHNICAL_EXECUTION_NOT_REQUIRED",
+    "AUTOMATION_MUST_NOT_BYPASS_AUTHORITY_OR_APPROVAL",
+    "CLIENT_UPGRADE_VERSION_FROM_TEMPLATE_MANIFEST",
+    "CLIENT_UPGRADE_PRESERVES_MUTABLE_PROJECT_STATE",
+    "CLIENT_CI_SOURCE_ONLY_STEPS_SKIP_CLEANLY"
   ],
   "source_only_paths": [
     ".github/workflows/governed-control-plane.yml",
@@ -59,14 +73,19 @@
       "docs/control-plane/TASKS.md",
       "docs/control-plane/PROGRAM.md",
       "docs/control-plane/CASE1_REPLAY_LEDGER.md",
-      "docs/control-plane/DATA_MODEL.md"
+      "docs/control-plane/DATA_MODEL.md",
+      "docs/control-plane/AGENT_ACTIVITY_LOG.md",
+      "docs/control-plane/CANONICAL_ARCHITECTURE.md",
+      "docs/control-plane/IMPORTED_MEMORY_VERIFICATION.md"
     ],
     "machine_authorities": [
       ".governance/control-plane-state/current.json",
       ".governance/control-plane-state/checkpoint.json",
       ".governance/control-plane-state/handoff.json",
       ".governance/control-plane-state/tasks.json",
-      ".governance/control-plane-state/case1-replay.json"
+      ".governance/control-plane-state/case1-replay.json",
+      ".governance/control-plane-state/agent-activity.json",
+      ".governance/control-plane-state/canonical-architecture.json"
     ],
     "issue_role": "ORCHESTRATION_AND_EVIDENCE_NOT_CANONICAL_SOURCE",
     "conversation_role": "SUPPLEMENTAL_CONTEXT_ONLY"
@@ -82,7 +101,9 @@
       ".governance/control-plane-db/001_schema.sql",
       ".governance/control-plane-db/catalog.json",
       ".governance/control-plane-db/runtime-seed.json",
-      ".governance/control-plane-db/materialize.py"
+      ".governance/control-plane-db/materialize.py",
+      ".governance/control-plane-db/002_agent_activity.sql",
+      ".governance/control-plane-db/003_canonical_authorities.sql"
     ],
     "invariants": [
       "DATABASE_BINARY_NOT_CANONICAL_IN_GIT",
@@ -90,8 +111,72 @@
       "ALL_STRUCTURING_CASES_SHARE_THE_SAME_RELATIONAL_MODEL",
       "OWNER_FEEDBACK_AND_DECISIONS_ARE_FIRST_CLASS_RECORDS",
       "CHECKPOINTS_AND_HANDOFFS_ARE_QUERYABLE",
-      "CLIENT_REPOSITORIES_DO_NOT_RECEIVE_CONTROL_PLANE_DATABASE"
-    ]
+      "CLIENT_REPOSITORIES_DO_NOT_RECEIVE_CONTROL_PLANE_DATABASE",
+      "CANONICAL_AUTHORITIES_HAVE_MONOTONE_REVISIONS",
+      "IMPORTED_MEMORY_CANNOT_GRANT_LIVE_APPROVAL",
+      "TARGET_ARCHITECTURE_NE_CURRENT_EXECUTION_STATE",
+      "EVENT_HISTORY_AND_CURRENT_PROJECTION_COEXIST",
+      "DURABLE_STRUCTURED_MEMORY_PROJECTS_TO_RELATIONAL_MODEL",
+      "UNPROJECTED_STRUCTURED_MEMORY_MUST_BE_EXPLICITLY_MARKED_PENDING"
+    ],
+    "schema_version": "1.2.0",
+    "projection_contract": {
+      "mode": "CONTINUOUS_GOVERNED_PROJECTION",
+      "git_authority_first": true,
+      "structured_memory_categories": [
+        "OWNER_FEEDBACK",
+        "DECISION",
+        "AGENT_ACTIVITY",
+        "PROGRAM_TASK_CHANGE",
+        "EVIDENCE",
+        "CHECKPOINT",
+        "HANDOFF",
+        "INTAKE",
+        "ARTIFACT",
+        "CANONICAL_AUTHORITY_REVISION"
+      ],
+      "unprojected_state": "PENDING_PROJECTION_EXPLICIT_ONLY"
+    }
+  },
+  "canonical_architecture": {
+    "authority_id": "CP-ARCH-001",
+    "path": "docs/control-plane/CANONICAL_ARCHITECTURE.md",
+    "machine_projection": ".governance/control-plane-state/canonical-architecture.json",
+    "scope": "CONTROL_PLANE_SOURCE_ONLY",
+    "status": "ACCEPTED_TARGET_ARCHITECTURE"
+  },
+  "agent_purpose_routing": {
+    "status": "PLANNED_NOT_ACTIVE",
+    "stage_1": [
+      "WORK_ON_CONTROL_PLANE",
+      "APPLY_GOVERNANCE_CASE"
+    ],
+    "stage_2_control_plane": [
+      "CODE_IMPLEMENTATION",
+      "EXECUTE_EXISTING_TASK",
+      "ADD_OR_ENRICH_INFORMATION"
+    ],
+    "stage_2_cases": [
+      "CREATE_NEW_REPOSITORY",
+      "ADOPT_EXISTING_REPOSITORY",
+      "MAP_EXISTING_PROJECT",
+      "LAB_EVOLUTION"
+    ],
+    "human_interaction": "ANSWERS_CHOICES_AND_EXPLICIT_APPROVALS_ONLY",
+    "technical_execution": "AUTOMATED_WHEN_AUTHORIZED",
+    "activation_gate": "IMPLEMENT_AND_PASS_ROUTER_REGRESSION_MATRIX"
+  },
+  "client_upgrade_contract": {
+    "version_source": ".governance/TEMPLATE_MANIFEST.json",
+    "exact_head_required": true,
+    "static_surface_sync_only": true,
+    "preserve_mutable_paths": [
+      ".governance/work/work-items.json",
+      ".governance/work/claims.json",
+      ".governance/sessions/sessions.json",
+      ".governance/canonical-memory/current.json"
+    ],
+    "source_only_ci_behavior": "SKIP_IF_ABSENT"
   },
   "client_repository": "Patricked-code/Gouvern"
 }
