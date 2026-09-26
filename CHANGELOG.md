@@ -165,3 +165,10 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Preserves direct MCP as the preferred BOTH transport while allowing read-only GitHub OIDC SSH discovery when the central direct credential is unavailable.
 - Records degraded BOTH discovery as PARTIAL with direct credential unavailability preserved explicitly.
 - Keeps DIRECT_MCP_TOKEN credential requirements mandatory and MCP write authority unchanged.
+
+## Governance Automation V2.6.8
+
+- Preserves V2.6.7 BOTH fallback semantics.
+- Persists MCP discovery failures with stable non-secret codes in the local governed issue.
+- Allows exact-head /local-execute retry while the local state is MCP_DISCOVERY.
+- Keeps HEAD_MOVED fail-closed without state mutation.
