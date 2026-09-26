@@ -127,3 +127,9 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Added GitHub App repository_dispatch machine commands for local-entry automation.
 - Preserved human write-permission authorization for issue commands.
 - Added exact-HEAD guards across central-to-local machine dispatch.
+
+## Governance Automation V2.6.1
+
+- Added GitHub App repository_dispatch machine commands for local-entry automation.
+- Preserved human write-permission authorization for issue commands.
+- Added exact-HEAD guards across central-to-local machine dispatch.
