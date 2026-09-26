@@ -1,15 +1,12 @@
 # STATUS — État courant
 
-> State: `GOVERNANCE_INITIALIZED_BASELINE_REQUIRED`
+> State: PROJECT_BASELINE_READY
 
-- Repository: `Patricked-code/Gouvern`
-- Branch: `main`
-- Bootstrap input HEAD: `bd1875ef7948bc74cedae13c6ab1065bf1c0d279`
-- Attested initialization commit: `98c8fecd4db017bb513f7a6fcc2531bf2b5058be`
-- Governance validation: `PASS`
-- Governance freshness: `ATTESTED`
-- Next action: `DISCOVER_PROJECT_BASELINE`
+- Repository: Patricked-code/Gouvern
+- Branch: main
+- Baseline subject HEAD: 3806a2c4f3a40aca28d34a00a77b2ad1be3e80f0
+- First governed session: LOCAL-000002-S1
+- Governance validation: PASS_PENDING_COMMIT
+- Next action: EXECUTE_FIRST_PROJECT_WORK_ITEM
 
-The attestation commit is the Git child commit containing this state; its remote presence is verified by the bootstrap workflow.
-
-No production, deployment, compliance, legal, financial or operational status is implied.
+First project objective: Construire la baseline fonctionnelle des OPCVM africains : inventorier les pays, régulateurs et principales sources documentaires à couvrir, puis définir le schéma minimal commun des données statiques des fonds et des métadonnées documents avant toute implémentation de collecteurs ou d’interface métier.

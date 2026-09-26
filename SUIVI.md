@@ -14,3 +14,10 @@ Les entrées suivantes doivent documenter les changements durables, décisions, 
 - Bootstrap attestation: `PASS`
 - Attested initialization commit: `98c8fecd4db017bb513f7a6fcc2531bf2b5058be`
 - Next action: `DISCOVER_PROJECT_BASELINE`
+
+## 2026-09-26T16:43:15+00:00 — First-agent project baseline
+
+- Session: LOCAL-000002-S1
+- Baseline subject HEAD: 3806a2c4f3a40aca28d34a00a77b2ad1be3e80f0
+- Profile: application
+- Next action: EXECUTE_FIRST_PROJECT_WORK_ITEM
