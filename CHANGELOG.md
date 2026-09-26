@@ -147,3 +147,9 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Emits stable non-secret failure evidence in the central request when provisioning is blocked.
 - Prevents machine dispatch after failed credential provisioning.
 - Keeps the central credential provisioning self-test safe in target clients where the central control-plane workflow is intentionally absent.
+
+## Governance Automation V2.6.5
+
+- Preserves automatic direct MCP credential provisioning and V2.6.4 fail-closed reporting.
+- Classifies target GitHub context, issue read, local-state decode and credential-gate contract failures before secret provisioning.
+- Keeps failure evidence non-secret and blocks machine dispatch until the credential path is valid.
