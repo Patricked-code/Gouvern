@@ -208,3 +208,9 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Governed client upgrade synchronized from the current Template manifest version.
 - Preserves client business state while refreshing the generic governance/runtime/test surface.
 - Client CI remains portable and source-only control-plane memory stays excluded.
+
+## Governance Automation V2.8.6
+
+- Governed client upgrade synchronized from the current Template manifest version.
+- Preserves client business state while refreshing the generic governance/runtime/test surface.
+- Client CI remains portable and source-only control-plane memory stays excluded.
