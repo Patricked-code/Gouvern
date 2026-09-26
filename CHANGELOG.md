@@ -184,3 +184,9 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Preserves V2.6.9 opportunistic BOTH credential provisioning.
 - Refreshes degraded BOTH discovery before setup approval when the preferred direct credential becomes available.
 - Preserves prior discovery evidence and existing setup answers during reconciliation.
+
+## Governance Automation V2.8.1
+
+- Adds exact-head governed machine local-entry start through the central GitHub App.
+- Machine-started local entries create and initialize their issue/state in one repository_dispatch.
+- Preserves existing first-agent baseline state and routes subsequent entries to NORMAL_GOVERNED_ENTRY.
