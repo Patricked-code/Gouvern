@@ -140,3 +140,10 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Provisioning is limited to exact-HEAD local credential gates and uses the target-owner GitHub App with repository Secrets write permission.
 - Secret values are never written to Git, issues, evidence or logs; only target secret metadata is attested.
 - Existing direct MCP token semantics and OIDC ephemeral SSH fallback remain unchanged.
+
+## Governance Automation V2.6.4
+
+- Preserves V2.6.3 automatic direct MCP credential provisioning.
+- Emits stable non-secret failure evidence in the central request when provisioning is blocked.
+- Prevents machine dispatch after failed credential provisioning.
+- Keeps the central credential provisioning self-test safe in target clients where the central control-plane workflow is intentionally absent.
