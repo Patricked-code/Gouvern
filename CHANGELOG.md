@@ -190,3 +190,9 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Adds exact-head governed machine local-entry start through the central GitHub App.
 - Machine-started local entries create and initialize their issue/state in one repository_dispatch.
 - Preserves existing first-agent baseline state and routes subsequent entries to NORMAL_GOVERNED_ENTRY.
+
+## Governance Automation V2.8.2
+
+- Preserves V2.8.1 machine local-entry start.
+- Synchronizes the current control-plane policy into upgraded clients while forcing target role GOVERNED_TARGET_CLIENT.
+- Keeps source-only memory paths absent from clients while matching the validator contract.
