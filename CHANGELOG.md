@@ -133,3 +133,10 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Added GitHub App repository_dispatch machine commands for local-entry automation.
 - Preserved human write-permission authorization for issue commands.
 - Added exact-HEAD guards across central-to-local machine dispatch.
+
+## Governance Automation V2.6.3
+
+- Added central control-plane provisioning of the direct MCP Actions credential for target repositories.
+- Provisioning is limited to exact-HEAD local credential gates and uses the target-owner GitHub App with repository Secrets write permission.
+- Secret values are never written to Git, issues, evidence or logs; only target secret metadata is attested.
+- Existing direct MCP token semantics and OIDC ephemeral SSH fallback remain unchanged.
