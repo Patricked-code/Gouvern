@@ -114,3 +114,10 @@ Creator tokens remain outside Git. The standard workflow `GITHUB_TOKEN` cannot c
 - Added FIRST_AGENT_BOOTSTRAP guided baseline.
 - Added NORMAL_GOVERNED_ENTRY routing for subsequent agents.
 - Added exact-HEAD guarded automatic baseline commit.
+
+## Governance Automation V2.6.0
+
+- Replaced persistent repository SSH private keys with GitHub OIDC-issued ephemeral SSH certificates.
+- Added strict host-key pinning from authenticated broker evidence.
+- Added read-only force-command SSH discovery fallback.
+- Preserved direct MCP + SSH BOTH mode without expanding server WRITE authority.
